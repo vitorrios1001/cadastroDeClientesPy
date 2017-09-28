@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Agenda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <h1>Cadastro de Clientes</h1>
-    <hr>
-    <a href="{{ url_for('cadastrar')}}">Cadastrar Clientes</a><br>
-    <a href="{{ url_for('lista')}}">Lista de Clientes</a>
-
+    <div class="container">
+        <header>
+            <h1>Agenda Digital</h1>
+            <hr>
+            <div>
+                <a href="{{ url_for('home')}}" class="btn btn-info" role="button">Inicio</a>
+                <a href="{{ url_for('cadastrar')}}" class="btn btn-info" role="button">Cadastro</a>
+                <a href="{{ url_for('lista')}}" class="btn btn-info" role="button">Lista de Contatos</a>
+            </div>
+            <br>
+        </header>
+    </div>
 </body>
 
 </html>

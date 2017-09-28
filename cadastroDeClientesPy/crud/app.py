@@ -47,7 +47,7 @@ def cadastro():
             db.session.add(p)
             db.session.commit()
 
-    return redirect(url_for("index"))        
+    return redirect(url_for("lista"))        
 
 @app.route("/lista")
 def lista():

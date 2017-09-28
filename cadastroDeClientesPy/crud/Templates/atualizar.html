@@ -4,45 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Agenda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <h1>Atualizar</h1>
-    <hr>
-    <h3>
-        <a href="{{ url_for('home')}}">Inicio</a>
-    </h3>
-    <form action="" method="POST">
-        <table>
-            <tr>
-                <td>Nome</td>
-                <td>
-                    <input type="text" name="nome" value="{{ pessoa.nome }}">
-                </td>
-            </tr>
-            <tr>
-                <td>Telfone</td>
-                <td>
-                    <input type="text" name="telefone" value="{{ pessoa.telefone }}">
-                </td>
-            </tr>
-            <tr>
-                <td>CPF</td>
-                <td>
-                    <input type="text" name="cpf" value="{{ pessoa.cpf }}">
-                </td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <input type="text" name="email" value="{{ pessoa.email }}">
-                </td>
-            </tr>
-        </table><br>
-        <input type="submit" value="Atualizar">
+    <div class="container">
+        <header>
+            <h1>Agenda Digital</h1>
+            <hr>
+            <div>
+                <a href="{{ url_for('home')}}" class="btn btn-info" role="button">Inicio</a>
+                <a href="{{ url_for('cadastrar')}}" class="btn btn-info" role="button">Cadastro</a>
+                <a href="{{ url_for('lista')}}" class="btn btn-info" role="button">Lista de Contatos</a>
+            </div>
+            <br>
+        </header>
+
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <td>Nome</td>
+                    <td>
+                        <input type="text" name="nome" value="{{ pessoa.nome }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Telfone</td>
+                    <td>
+                        <input type="text" name="telefone" value="{{ pessoa.telefone }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>CPF</td>
+                    <td>
+                        <input type="text" name="cpf" value="{{ pessoa.cpf }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="text" name="email" value="{{ pessoa.email }}">
+                    </td>
+                </tr>
+            </table><br>
+            <input type="submit" class="btn btn-success" value="Atualizar">
 
 
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>
